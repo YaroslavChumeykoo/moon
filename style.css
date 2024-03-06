@@ -14,15 +14,16 @@ body{
 
 }
 header{
-    width: 70%;
+    width: 1024px;
     display: flex;
-    height: 15%;
+    height: 20%;
     justify-content: space-between;
 }
 .logo{
     cursor: pointer;
     margin: 15px;
-    width: 130px;
+    width: 120px;
+    height: 100px;
 }
 .all_but_header{
     display: flex;
@@ -32,7 +33,6 @@ header{
     cursor: pointer;
     font-size: 26px;
     margin: 15px;
-    margin-top:30px;
     width: 150px;
     height: 50px;
     background-color: rgba(28,28,28,0);
@@ -41,248 +41,91 @@ header{
     border-radius: 10px;
     padding: 7px;
 }
-main{
+.main{
+    height: 79.5%;
+    width: 1024px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
-    height: 85%;
-    width: 100%;
+    justify-content: flex-end;
     overflow: hidden;
 }
-.moon_container{
+.planet_container{
+    width: 1024px;
+}
+.planet{
+    margin: 0px;
+    width: 1024px;
     height: 100%;
+}
+.moon_container{
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: flex-end;
 }
 .moon{
-    cursor: pointer;
-    width: 100px;;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     animation-name: moon-move;
-    animation-duration: 30s;
+    animation-duration: 10s;
     animation-timing-function: linear;
-    animation-iteration-count: infinite;
-
+    /* animation-iteration-count: infinite; */
 }
 
 @keyframes moon-move{
     0%{
-        transform: translateX(-200%) translateY(500%);
+        transform: translateX(-300%) translateY(400px);
     }
-    40%{
-        transform: translateX(600%) translateY(-100%);
+    25%{
+        transform: translateX(50%) translateY(0);
     }
-    60%{
-        transform: translateX(1200%) translateY(-100%);
+    50%{
+        transform: translateX(500%) translateY(-100%);
+    }
+    75%{
+        transform: translateX(1200%) translateY(0);
     }
     100%{
-        transform: translateX(1800%) translateY(500%);
+        transform: translateX(1500%) translateY(400px)
     }
 }
-.planet_container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.menu{
-    height: 85%;
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-}
-.menu_item{
-    font-family: "Libre Franklin", sans-serif;
-    width: calc(50% - 10px);
-    height: calc(50% - 10px);
-    margin: 5px;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: #fff7d8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    
-}
-.item{
-    margin: 20px;
-    height: 50%;
-    margin-bottom: 0;
-}
-.name_item{
-    font-size: 20px;
-    margin: 15px;
-    margin-bottom: 5px;
-    align-self:flex-start;
-}
-.info_item{
-    font-size: 15px;
-    margin: 15px;
-    margin-top: 0px;
-}
-
-@media screen and (max-width: 1600px){
-    @keyframes moon-move{
-        0%{
-            transform: translateX(-100%) translateY(300%);
-        }
-        40%{
-            transform: translateX(400%) translateY(-80%);
-        }
-        60%{
-            transform: translateX(900%) translateY(-80%);
-        }
-        100%{
-            transform: translateX(1500%) translateY(300%);
-        }
-    }
-}
-@media screen and (max-width: 1100px){
-    .logo{
-        width: 100px;
-        height: 100px;
-    }
-    @keyframes moon-move{
-        0%{
-            transform: translateX(-300%) translateY(300%);
-        }
-        40%{
-            transform: translateX(300%) translateY(-70%);
-        }
-        60%{
-            transform: translateX(700%) translateY(-70%);
-        }
-        100%{
-            transform: translateX(1300%) translateY(300%);
-        }
-    }
-}
-@media screen and (max-width: 810px){
+@media screen and (max-width: 1023px){
     header{
-        width: 100%;
+        width: 100vw;
     }
-    .but_about, .but_menu{
-        font-size: 15px;
-        margin: 40px;
-        margin-top:30px;
-        margin-left: 0;
-        width: 100px;
-        height: 40px;
-    }
-    .logo{
-        margin-left: 30px;
-        width: 100px;
-        height: 100px;
+    .main{
+        width: 100vw;
     }
     .planet{
-        width: 810px;
+        width: 100vw;
+    }
+    .planet_container{
+        width: 100vw;;
     }
     .moon{
-        width: 50px;
+        width: 8vw;
+        height: 8vw;
+    }
+}
+@media screen and (max-width:500px){
+    .but_about, .but_menu{
+        font-size: 13px;
+        width: 75px;
+        height: 30px;
+        margin: 15px;
+    }
+    .logo{
+        margin: 15px;
+        width: 60px;
         height: 50px;
     }
-
-    @keyframes moon-move{
-        0%{
-            transform: translateX(-300%) translateY(300%);
-        }
-        40%{
-            transform: translateX(500%) translateY(-90%);
-        }
-        60%{
-            transform: translateX(1000%) translateY(-90%);
-        }
-        100%{
-            transform: translateX(1800%) translateY(300%);
-        }
+    header{
+        width: 100vw;
+        height: 10%;
     }
-}
-@media screen and (max-width: 600px){
-
-    .but_about, .but_menu{
-        font-size: 15px;
-        margin: 40px;
-        margin-top:30px;
-        margin-left: 0;
-        width: 100px;
-        height: 40px;
+    .main{
+        width: 100vw;
+        height: 89.5%;
     }
-    .logo{
-        margin: 30px;
-        width: 80px;
-        height: 80px;
-    }
-    .planet{
-        width: 810px;
-    }
-    .moon{
-        width: 30px;
-        height: 30px;
-    }
-
-    @keyframes moon-move{
-        0%{
-            transform: translateX(-300%) translateY(300%);
-        }
-        40%{
-            transform: translateX(500%) translateY(-90%);
-        }
-        60%{
-            transform: translateX(1500%) translateY(-90%);
-        }
-        100%{
-            transform: translateX(2000%) translateY(300%);
-        }
-    }
-
-}
-@media screen and (max-width: 450px){
-
-    .but_about, .but_menu{
-        margin: 10px;
-    }
-
-    @keyframes moon-move{
-        0%{
-            transform: translateX(-300%) translateY(300%);
-        }
-        40%{
-            transform: translateX(500%) translateY(-90%);
-        }
-        60%{
-            transform: translateX(1200%) translateY(-90%);
-        }
-        100%{
-            transform: translateX(1800%) translateY(300%);
-        }
-    }
-    .planet{
-        width: 450px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.none{
-    display: none;
 }
