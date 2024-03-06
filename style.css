@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -43,7 +42,7 @@ header{
     padding: 7px;
 }
 .main{
-    height: 79.5%;
+    height: 80%;
     width: 1024px;
     display: flex;
     flex-direction: column;
@@ -72,7 +71,65 @@ header{
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
+.about_Us{
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid white;
+    height: 80%;
+    width: 1024px;
+    color: #fdf6d9;
+    display: flex;
+    flex-direction: column;
+}
+.restoran_text{
+    margin: 10px;
+    width: calc(50% - 10px);
 
+}
+.container_restoran1{
+    width: 100%;
+    display: flex;
+    height: 50%;
+}
+.restoran{
+    margin: 10px;
+    width: calc(50% - 20px);
+}
+.container_restoran2{
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+.menu{
+    width: 1024px;
+    height: 80%;
+    border: 1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    border-radius: 10px;
+}
+.menu_container{
+    margin: 5px;
+    width: calc(33% - 7px);
+    height: calc(50% - 10px);
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.menu_container img{
+    max-height: 80%;
+    max-width: 80%;
+}
+.menu_container h3{
+    margin-top: 10px;
+    color: white;
+    align-self: baseline;
+}
 @keyframes moon-move{
     0%{
         transform: translateX(-300%) translateY(400px);
@@ -107,6 +164,25 @@ header{
         width: 8vw;
         height: 8vw;
     }
+    .about_Us{
+        margin: 5px;
+        font-size: 1.8vw;
+        width: calc(100vw - 10px);
+        color: #fdf6d9;
+    }
+    .menu{
+        width: calc(100vw - 10px);
+    }
+    .menu_container{
+        width: calc(33% - 10px);
+        height: calc(50% - 10px);;
+    
+    }
+}
+@media screen and (max-width:800px){
+    .about_Us{
+        font-size: 2vw;
+    }
 }
 @media screen and (max-width:500px){
     .but_about, .but_menu{
@@ -121,11 +197,54 @@ header{
         height: 50px;
     }
     header{
-        width: 100vw;
+        width: calc(100vw - 20px);
         height: 10%;
     }
     .main{
         width: 100vw;
-        height: 89.5%;
+        height: 90%;
     }
+    body{
+        width: calc(100vw - 20px);
+    }
+    .about_Us{
+        font-size: 14px;
+        border-radius: 10px;
+        border: 1px solid white;
+        width: calc(100vw - 20px);
+        height: auto;
+        color: #fdf6d9;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .restoran_text{
+        margin: 10px;
+        width: calc(100vw - 20px);
+    
+    }
+    .container_restoran1{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .restoran{
+        margin: 5px;
+        width: 90%;
+    }
+    .container_restoran2{
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menu_container{
+        width: calc(100% - 10px);
+    
+    }
+}
+
+.none{
+    display: none;
 }
